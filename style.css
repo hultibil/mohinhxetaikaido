@@ -1,33 +1,65 @@
-
 body {
     padding: 80px;
     background: #111827;
     color:white;
     font-family: 'HarmonyOS Sans', sans-serif;
 }
+
+/* CSS cho tiêu đề */
 .header {
-    position: fixed;
-    z-index: 1000;
+    position: fixed; /* Đặt vị trí cố định để header luôn hiển thị trên cùng */
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
     top: 10px;
     left: 10px;
     right: 10px;
     padding: 10px;
     border-radius: 15px;
-    display: flex;
-    align-items: center;
+    display: flex; /* Sử dụng flexbox để căn giữa các phần tử con */
+    justify-content: left; /* Căn giữa theo chiều ngang */
+    align-items: center; 
     gap: 10px;
     h2 {
         color: black;
         font-size: 20px;
     }
     background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
-    
 }
+/* CSS cho hang nut tren dau */
 
-.dieuhuong {
+
+.nut0chon {
     margin-left: auto;
+    display: flex;
     a {
-
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+    }
+}
+.nut0 {
+    margin-left: auto;
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    &:hover a {
+        background: linear-gradient(to right, #000000, #808080);
+        }
+}
+.nut1 {
+    display: flex;
+    a {
         color: white;
         text-decoration: none;
         font-size: 10px;
@@ -39,6 +71,50 @@ body {
         background: linear-gradient(to right, #000000, #808080);
     }
 }
+/*Nút 1 đã chọn*/
+.nut1chon {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+    }
+}
+.nut2, .nut3 {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    &:hover a {
+        background: linear-gradient(to right, #000000, #808080);
+    }
+}
+.nut2chon {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+    }
+}
+
 
 .logo {
     text-align: center;
@@ -46,20 +122,39 @@ body {
     height:60px;
 }
 .silver {
+    background: linear-gradient(
+        90deg,
+        silver,
+        white,
+        black,
+        silver
+    );
+    background-size: 400% 400%;
+    animation: RGB 10s linear infinite;
     color: silver;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
-
     margin-top:20px;
-    background: linear-gradient(to right, black, gray);
     padding: 30px;
     border-radius: 10px;
-
+/* CSS cho tiêu đề */
     text-shadow:
         -2px -2px 0 black,
          2px -2px 0 black,
         -2px  2px 0 black,
          2px  2px 0 black;
+}
+/*Dải màu RGB chuyển động tiêu đề*/
+@keyframes RGB {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 /*Khu vuc thong bao su kien*/
 .sukien {
@@ -75,52 +170,43 @@ body {
     border-radius: 10px;
 }
 .sukien {
-    animation: moDan 1s infinite;
+    animation: moDan 5s infinite;
 }
 @keyframes moDan {
     0% {
         opacity: 1;
     }
     50% {
-        opacity: 0.3;
+        opacity: 0.8;
     }
     100% {
         opacity: 1;
     }
 }
 .sukien a{
-
     font-size: 20px;
     color: rgba(217, 255, 0);
     text-decoration: none;
+    &:hover {
+        background: Linear-gradient(to right, #ff416c, #ff4b2b);
+    }
 }
-
-.game {
+/*Nút sự kiện cho các trang con khác*/
+.chuyentiep {
     text-align: center;
     margin-top: 20px;
     a {
-
+        font-family: 'system-ui';
         font-size: 20px;
         color: white;
         text-decoration: none;
         background: linear-gradient(to right, #ff416c, #ff4b2b);
         padding: 10px 20px;
         border-radius: 10px;
+        display: inline-block;
     }
-}
-
-.game {
-    animation: moDan 1s infinite;
-}
-@keyframes moDan {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 1;
+    &:hover a {
+        background: linear-gradient(to right, #000000, #808080);
     }
 }
 /*Khu vuc ket thuc su kien*/
@@ -129,33 +215,63 @@ body {
     background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0));
     border-radius: 10px;
     p {
-
-    font-size: 20px;
+    font-size: 23px;
     }
     a {
-    background: linear-gradient(to right, yellow, orange);
-    font-size: 20px;
-    font-family: 'system-ui';
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    margin-left: 5px;
+    gap: 5px;
+    display: inline-block;
+    color: white;
+    font-size: 17px;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    border-radius: 5px;
     text-decoration: none;
+    &:hover {
+        background: rgba(0, 0, 0, 0.8);
     }
-}
+}}
 
 .chuyen {
-
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+    background-size: 400% 400%;
+    animation: RGB 10s linear infinite;
+    border-radius: 10px;
+    padding: 10px 20px;
     text-align: center;
     font-size: 20px;
+    color: white;
 }
-
+/*Dải màu RGB chuyển động*/
+@keyframes RGB {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .text {
     text-align: center;
     color: silver;
     font-size: 25px;
     font-weight: bold;
-
     margin-top:20px;
     border-radius: 10px;
-
     text-shadow:
         -2px -2px 0 black,
          2px -2px 0 black,
@@ -194,6 +310,7 @@ img {
     }
 }
 
+/*CSS cho phan chuyen anh*/
 .slider{
     width: 400px;
     margin: auto; 
@@ -212,7 +329,8 @@ img {
 .prev, .next {
     position: absolute; /*Vị trí tuyệt đối để đặt nút trên hình ảnh*/
     top: 50%;              /*Vị trí nút ở giữa theo chiều dọc*/
-    transform: translateY(-50%);  /*Dịch chuyển nút lên 50% chiều cao của hình ảnh để căn giữa*/
+    transform: translateY(-50%); /*Dịch chuyển nút lên 50% chiều cao của hình ảnh để căn giữa*/
+    z-index: 10; /*Đảm bảo nút nằm trên hình ảnh*/ /*-----Quan trong-----*/
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -221,7 +339,6 @@ img {
     cursor: pointer;
     border-radius: 5px;
 }
-
 .prev {
     left: 10px; /*Nut trái cách 10px từ cạnh trái */
 }
@@ -270,11 +387,9 @@ img {
     background: rgba(255, 0, 0, 0.2);
     border-radius: 20px;
     p {
-
         font-size: 15px;
     }
     a {
-
         color: white;
         text-decoration: none;
         font-size: 15px;
@@ -285,12 +400,44 @@ img {
     }
 }
 
-.quatrinhhientai {
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    color: white;
+}
+/*hover cho nút tik tok*/
+.tiktok, .tiktok2, .tiktok3{
+    &:hover a {
+        background: linear-gradient(
+    90deg,
+    #25f4ee,
+    #000000,
+    #fe2c55
+);
+    }
+}
+/*hover cho nút youtube*/
+.youtube, .youtube2{
+    &:hover a {
+        background: red;
+}
+}
+/*Thu nhổ thì tự động thu lại thành dọc*/
+@media (max-width: 1000px) {
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/*xe dia hinh*/
+.xediahinh {
+    background: rgba(3, 196, 245, 0.2);
     text-align: center;
-    background: rgba(145, 248, 255, 0.2);
     border-radius: 20px;
     p {
- 
+  
         font-size: 20px;
     }
 }
@@ -298,6 +445,18 @@ img {
 .xetaiv5 {
     text-align: center;
     background: rgba(217, 255, 0, 0.208);
+    border-radius: 20px;
+    p {
+
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+    }
+}
+
+.xetaiv6 {
+    text-align: center;
+    background: rgba(5, 150, 138, 0.2);
     border-radius: 20px;
     p {
 
