@@ -84,6 +84,7 @@ setInterval(function () {
 /*hieu ung slide 3*/
 
 const images3 = [
+    "image/DauxeV5Moi.jpg",
     "image/DauxeV5Moi2.jpg",
     "image/DauxeV5Moi3.jpg",
     "image/DauxeV5Moi4.jpg"
