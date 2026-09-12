@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản phẩm thủ công khác của Kaido</title>
     <link rel="icon" href="image/kaidoLogomini.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--TRANG LOADING-->
+    <div id="loading">
+        <img src="image/imgload.png">
+        <p>Loading<span id="dots">.</span></p>
+    </div>
     <div class="header"> <!--Add CSS-->
             <img class="logo" src="image/kaidologo.jpg">
             <h2>Sản phẩm thủ công khác của Kaido</h2>
@@ -84,6 +88,16 @@ setInterval(capNhatGio, 1000);
     <div class="quaylai">
         <a href="#dautrang">Bấm vào đây để quay lại đầu trang</a>
     </div>
+    <!--Loading xong load ngay giao diện-->
+    <script>
+window.addEventListener("load", function() {
+    const loading = document.getElementById("loading");
+    loading.style.opacity = "0";
+    setTimeout(function() {
+        loading.style.display = "none";
+    }, 500);
+});
+</script>   
 </body>
     <script src="slide.js"></script>
 </html>
