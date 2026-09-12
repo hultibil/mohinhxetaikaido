@@ -1,5 +1,5 @@
 body {
-    padding: 80px;
+    padding: 130px;
     background: #111827;
     color:white;
     font-family: 'HarmonyOS Sans', sans-serif;
@@ -371,7 +371,6 @@ img {
     background: rgba(0, 140, 255, 0.2);
     border-radius: 20px;
     p {
-
         font-size: 20px;
     }
 }
@@ -382,6 +381,36 @@ img {
     border-radius: 20px;
 }
 
+/*Mục quãng cáo*/
+.ads {
+    display: flex;
+    background: rgb(111, 111, 111);
+    border-radius: 10px;
+}
+.bangquangcao {
+    flex:1;
+    background: linear-gradient(rgb(255,255,255), rgb(54, 167, 219));
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    padding-top: 0px;
+    .tieudeqc {
+        color:red;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.noidung2 {
+    display:flex;
+    gap: 40px;
+    p {
+        color:black;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+}
 .thongtinweb {
     text-align: center;
     background: rgba(255, 0, 0, 0.2);
@@ -425,7 +454,7 @@ img {
 }
 /*Thu nhổ thì tự động thu lại thành dọc*/
 @media (max-width: 1000px) {
-    .footer {
+    .footer, .ads {
         flex-direction: column;
         gap: 20px;
     }
