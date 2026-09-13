@@ -673,3 +673,147 @@ img {
         background: linear-gradient(to right, #000000, #808080);
     }
 }
+
+/* ============================================================
+   RESPONSIVE - TỐI ƯU CHO MOBILE (thêm mới, không sửa CSS gốc)
+   ============================================================ */
+@media (max-width: 768px) {
+ 
+    body {
+        padding: 15px;
+    }
+ 
+    /* Bỏ "fixed" trên mobile để header không đè lên nội dung
+       dù nó xuống mấy dòng cũng không sao, không cần padding-top đoán mò */
+    .header {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+ 
+    .header h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 0;
+    }
+ 
+    .logo {
+        width: 70px;
+        height: 45px;
+    }
+ 
+    .nut0, .nut0chon, .nut1, .nut1chon, .nut2, .nut2chon, .nut3 {
+        margin-left: 0;
+    }
+ 
+    .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
+    .nut2 a, .nut2chon a, .nut3 a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+ 
+    .silver {
+        font-size: 24px;
+        padding: 15px;
+    }
+ 
+    .gioithieu p {
+        font-size: 18px;
+    }
+ 
+    .gioithieu a {
+        font-size: 15px;
+        display: block;
+        margin: 5px 0;
+    }
+ 
+    .sukien p, .sukien a {
+        font-size: 16px;
+    }
+ 
+    .chuyentiep a {
+        font-size: 16px;
+    }
+ 
+    .chuyen {
+        font-size: 16px;
+    }
+ 
+    .text {
+        font-size: 20px;
+    }
+ 
+    /* Ảnh và video: bỏ kích thước cố định, co giãn theo màn hình */
+    img:not(.logo) {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+    }
+ 
+    video {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+    }
+ 
+    .slider {
+        width: 100%;
+        max-width: 350px;
+    }
+ 
+    .ai-message, .user-message {
+        max-width: 90%;
+    }
+ 
+    .chat {
+        height: 400px;
+    }
+ 
+    .noidung2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+ 
+    .bangquangcao .tieudeqc {
+        font-size: 22px;
+    }
+ 
+    .footer {
+        padding: 20px 15px;
+        text-align: center;
+    }
+ 
+    .quaylai a {
+        font-size: 16px;
+    }
+}
+ 
+@media (max-width: 480px) {
+ 
+    .header h2 {
+        font-size: 13px;
+    }
+ 
+    .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
+    .nut2 a, .nut2chon a, .nut3 a {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+ 
+    .silver {
+        font-size: 19px;
+    }
+ 
+    .chat {
+        height: 320px;
+    }
+ 
+    .chat-input input {
+        font-size: 14px;
+    }
+}
