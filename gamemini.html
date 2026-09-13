@@ -131,7 +131,7 @@
         const OBSTACLE_TOP = GROUND + TREE_HEIGHT; // đỉnh chướng ngại vật = 240
         const GRAVITY = -2100;         // trọng lực (px/s^2), càng âm rơi càng nhanh
         const JUMP_VELOCITY = 1050;    // vận tốc bật nhảy ban đầu (px/s)
-        const MAX_SPEED = 600; // tốc độ tối đa của chướng ngại vật, chạy nhanh mấy cũng không vượt quá mức này
+        const MAX_SPEED = 1500; // tốc độ tối đa của chướng ngại vật, chạy nhanh mấy cũng không vượt quá mức này
  
         let started = false;
         let gameOver = false;
@@ -139,7 +139,7 @@
         let velocity = 0;
         let isJumping = false;
         let treeRight = -100;
-        let speed = 360;               // tốc độ chướng ngại vật (px/s), tăng dần theo điểm
+        let speed = 500;               // tốc độ chướng ngại vật (px/s), tăng dần theo điểm
         let score = 0;
         let scoreCounted = false;
         let lastTime = null;
@@ -149,7 +149,7 @@
             velocity = 0;
             isJumping = false;
             treeRight = -100;
-            speed = 360;
+            speed = 500;
             score = 0;
             scoreCounted = false;
             lastTime = null;
