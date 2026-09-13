@@ -35,6 +35,7 @@ function askQuestion(question) {
     let answer = "";
 
 
+
     // =========================
     // THÔNG TIN CHUNG VỀ KAIDO
     // =========================
@@ -50,7 +51,6 @@ function askQuestion(question) {
             "Website hiện tại giới thiệu lịch sử của các phiên bản mẫu xe và dự án của CLB từ trước đến nay nhưng hiện tại chưa có dự án nào khác ở mục Sản phẩm thủ công.";
 
     }
-
 
     // =========================
     // XE CÔNG NÔNG
@@ -223,16 +223,109 @@ function askQuestion(question) {
 
     }
 
+
+    /*Chào hỏi cơ bản*/
+    else if (
+        q.includes("Xin chào") ||
+        q.includes("XIN CHAO") ||
+        q.includes("xin chao") ||
+        q.includes("xin chào") ||
+        q.includes("CHAO BAN") ||
+        q.includes("Chào bạn") ||
+        q.includes("chao ban") ||
+        q.includes("hi") ||
+        q.includes("HI") ||
+        q.includes("hello") ||
+        q.includes("Xin chào bạn") ||
+        q.includes("xin chao ban") ||
+        q.includes("Xin chao ban") ||
+        q.includes("xin chào bạn") ||
+        q.includes("Chào") ||
+        q.includes("chào") ||
+        q.includes("chào buổi sáng") ||
+        q.includes("chao buoi sang") ||
+        q.includes("Chào buổi sáng") ||
+        q.includes("Chao buoi sang") ||
+        q.includes("chào buổi trưa") ||
+        q.includes("chao buoi trua") ||
+        q.includes("Chào buổi trưa") ||
+        q.includes("Chao buoi trua") ||
+        q.includes("Chao buoi chieu") ||
+        q.includes("Chào buổi chiều") ||
+        q.includes("chao buoi chieu") ||
+        q.includes("chào buổi chiều") ||
+        q.includes("Chào buổi tối") ||
+        q.includes("chào buổi tối") ||
+        q.includes("chao buoi toi") ||
+        q.includes("Chào buổi tối")
+    ) {
+        answer =
+        "Xin chào bạn, mình có thể giúp gì cho bạn"+
+        ". Mình có thể giúp bạn điều gì"
+    }
+
+    else if (
+        q.includes("bai") ||
+        q.includes("Bai") ||
+        q.includes("BAI") ||
+        q.includes("bye") ||
+        q.includes("BYE") ||
+        q.includes("Tạm biệt") ||
+        q.includes("tạm biệt") ||
+        q.includes("TẠM BIỆT") ||
+        q.includes("bai nha") ||
+        q.includes("cáo từ") ||
+        q.includes("tam biet") ||
+        q.includes("TAM BIET") ||
+        q.includes("tạm biệt bạn") ||
+        q.includes("Tạm biệt bạn") ||
+        q.includes("tam biet ban")
+    ) {
+        answer =
+        "Tạm biệt bạn! Chúc bạn một ngày tốt lành"
+    }
+
+    else if (
+        q.includes("bạn giúp mình những gì?") ||
+        q.includes("ban co the giup duoc gi") ||
+        q.includes("ban giup duoc gi?") ||
+        q.includes("bạn giúp được gì") ||
+        q.includes("giúp được gì") ||
+        q.includes("giup duoc gi") ||
+        q.includes("giup cai gì") ||
+        q.includes("Giúp cái gì") ||
+        q.includes("Giup cai gi") ||
+        q.includes("giúp cái gì") ||
+        q.includes("giúp được cái gì") ||
+        q.includes("Giúp được cái gì") ||
+        q.includes("giup duoc cai gi") ||
+        q.includes("Giup duoc cai gi")
+    ) {
+        answer =
+        "Mình có thể giúp bạn biết thông tin về thương hiệu Kaido và sản phẩm khác của Kaido."
+    }
+
+    else if (
+        q.includes("gay") ||
+        q.includes("GAY") ||
+        q.includes("mày gay") ||
+        q.includes("m gay") ||
+        q.includes("M gay") ||
+        q.includes("MÀY GAY")
+    ) {
+        answer =
+        "Bạn đừng nói mình thế, mình thằng tấp như cây thước 30cm."
+    }
+
     // KHÔNG BIẾT
     // =========================
 
     else {
 
         answer =
-            "Mình xin lỗi vì mình không hiểu câu hỏi mà bạn đặt ra và mình không tìm thấy thông tin này trong dữ liệu KAIDO." +
+            "Mình xin lỗi vì mình không hiểu lời bạn nhắn mà bạn đã nhập và mình không tìm thấy thông tin này trong dữ liệu KAIDO." +
             "Bạn có thể thử hỏi về xe V1, V2, V3, V4, V5, xe camera, " +
             "xe công nông hoặc xe địa hình nhé! Mình có thể mình sẽ giúp ích được cho bạn.";
-
     }
 
 
@@ -279,7 +372,7 @@ function clearChat() {
         `
         <div class="ai-message">
             <b>KAIDO AI</b>
-            <p>Đã xóa lịch sử chat! Bạn có thể tiếp tục trò chuyện.</p>
+            <p>Đã xóa lịch sử chat! Bạn có thể tiếp tục trò chuyện bằng cách nhấn vào thanh chat hoặc nhấn vào nút câu hỏi đề xuất.</p>
         </div>
         `;
 

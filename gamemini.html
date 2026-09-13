@@ -59,8 +59,8 @@
         /* Màn hình chờ bắt đầu / thua cuộc */
         .startScreen, .gameOverScreen {
             position: absolute;
+            margin:50px;
             inset: 0;
-            background: rgba(0,0,0,0.65);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -68,6 +68,9 @@
             gap: 15px;
             z-index: 20;
             text-align: center;
+            color: white;
+            font-size: 30px;
+            margin-top: 10px;
         }
         .startScreen button, .gameOverScreen button {
             padding: 14px 34px;
@@ -78,6 +81,7 @@
             background: orange;
             color: white;
             cursor: pointer;
+            margin-bottom: -40px;
         }
         .gameOverScreen p {
             color: white;
@@ -87,6 +91,14 @@
     </style>
 </head>
 <body>
+
+    <!--TRANG LOADING-->
+    <div id="loading">
+        <img src="image/imgload.png">
+        <p>Đang tải, chờ xíu nha<span id="dots">.</span></p>
+    </div>
+
+
     <div class="tittle">XE TẢI BAY</div>
     <div class="tittle" id="score">Điểm: 0</div>
 <div class="back">
@@ -98,7 +110,8 @@
         <div class="ground"></div>
  
         <div class="startScreen" id="startScreen">
-            <button id="startBtn">BẮT ĐẦU</button>
+            <button id="startBtn">CHƠI</button>
+            <p>Nhấn nút bay hoặc nhấn phím SPACE trên bàn phím</p>
         </div>
  
         <div class="gameOverScreen" id="gameOverScreen" style="display:none;">
@@ -256,5 +269,17 @@
         /* Trạng thái ban đầu: hiện màn hình "Bắt đầu", xe tải & chướng ngại vật đứng yên */
         resetGameState();
     </script>
+
+    <!--Đặt Cho loading-->
+<script>
+window.addEventListener("load", function() {
+    const loading = document.getElementById("loading");
+    loading.style.opacity = "0";
+    setTimeout(function() {
+        loading.style.display = "none";
+    }, 500);
+});
+</script>
+
 </body>
 </html>
