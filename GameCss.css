@@ -147,13 +147,3 @@ body {
         opacity: 1;
     }
 }
-/* Tối ưu cho mobile */
-@media (max-width: 768px) {
-    .tittle {
-        font-size: 26px;
-    }
-    .back a {
-        font-size: 18px;
-        padding: 8px 16px;
-    }
-}
