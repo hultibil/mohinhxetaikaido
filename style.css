@@ -1,10 +1,96 @@
+/* Nhúng font riêng - HarmonyOS Sans (đầy đủ 6 độ đậm x thường/nghiêng) */
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin_Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light_Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium_Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold_Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black_Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+ 
 body {
     padding: 130px;
     background: #111827;
     color:white;
     font-family: 'HarmonyOS Sans', sans-serif;
 }
-
+ 
 /* CSS cho tiêu đề */
 .header {
     position: fixed; /* Đặt vị trí cố định để header luôn hiển thị trên cùng */
@@ -24,8 +110,8 @@ body {
     }
     background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
 }
-
-
+ 
+ 
 /*CSS cho loading*/
 #loading {
     position: fixed;
@@ -58,12 +144,12 @@ body {
         transform: scale(1.0);
         opacity: 0.7;
     }
-
+ 
     50% {
         transform: scale(1.1);
         opacity: 1;
     }
-
+ 
     100% {
         transform: scale(1.0);
         opacity: 0.7;
@@ -157,8 +243,8 @@ body {
         background: linear-gradient(to right, #ff416c, #ff4b2b);
     }
 }
-
-
+ 
+ 
 .logo {
     text-align: center;
     width:100px;
@@ -207,7 +293,7 @@ body {
     border: 4px solid black;
 }
 .sukien p {
-
+ 
     font-size: 20px;
     color: white;
     border-radius: 10px;
@@ -275,7 +361,7 @@ body {
         background: rgba(0, 0, 0, 0.8);
     }
 }}
-
+ 
 .chuyen {
     background: linear-gradient(
         90deg,
@@ -321,38 +407,38 @@ body {
         -2px  2px 0 black,
          2px  2px 0 black;
 }
-
+ 
 .xe {
     background: rgba(0,0,0,0.2);
     border-radius: 40px;
     display: block;
     text-align: center;
     p {
-
+ 
         font-size: 20px;
     }
 }
-
+ 
 .video1 {
     text-align: center;
     border-radius: 30px;
 }
-
+ 
 img {
     border-radius: 10px;
     width: 500px;
 }
-
+ 
 .thoisokhai {
     text-align: center;
     background: rgba(255, 218, 7, 0.2);
     border-radius: 30px;
     p {
-
+ 
         font-size: 20px;
     }
 }
-
+ 
 /*CSS cho phan chuyen anh*/
 .slider{
     width: 400px;
@@ -367,7 +453,7 @@ img {
     opacity: 1;
     transition: opacity 0.8s ease;
 }
-
+ 
 /*Khu vuc nút*/
 .prev, .next {
     position: absolute; /*Vị trí tuyệt đối để đặt nút trên hình ảnh*/
@@ -388,17 +474,17 @@ img {
 .next {
     right: 10px; /*Nut phải cách 10px từ cạnh phải */
 }
-
+ 
 .thoimoi {
     text-align: center;
     p {
-
+ 
         font-size: 20px;
     }
     background: rgb(7, 201, 255, 0.2);
     border-radius: 20px;
 }
-
+ 
 .hiendai {
     background: rgba(82, 255, 3, 0.2);
     text-align: center;
@@ -408,7 +494,7 @@ img {
         font-size: 20px;
     }
 }
-
+ 
 .hientai {
     text-align: center;
     background: rgba(0, 140, 255, 0.2);
@@ -417,42 +503,50 @@ img {
         font-size: 20px;
     }
 }
-
+ 
 .hino {
     text-align: center;
     background: rgba(217, 0, 255, 0.2);
     border-radius: 20px;
 }
-
+ 
 /*Mục quãng cáo*/
 .ads {
     display: flex;
     background: rgb(111, 111, 111);
     border-radius: 10px;
+
+.anhquangcao {
+    width: 210px;
+    height: 150px;
+}
 }
 .bangquangcao {
     flex:1;
     background: linear-gradient(rgb(255,255,255), rgb(54, 167, 219));
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     border-radius: 10px;
-    padding-top: 0px;
+    padding-top: -10px;
     .tieudeqc {
         color:red;
-        font-size: 30px;
+        font-size: 18px;
         font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: -10px;
     }
 
+ 
 .noidung2 {
+    margin-bottom:-10px;
     display:flex;
-    gap: 40px;
+    gap: 20px;
     p {
         color:black;
-        font-size: 18px;
+        font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
     }
 }
-
+ 
 }
 .thongtinweb {
     text-align: center;
@@ -471,7 +565,7 @@ img {
         font-size: 18px;
     }
 }
-
+ 
 .footer {
     display: flex;
     justify-content: space-between;
@@ -502,7 +596,7 @@ img {
         gap: 20px;
     }
 }
-
+ 
 /*xe dia hinh*/
 .xediahinh {
     background: rgba(3, 196, 245, 0.2);
@@ -513,37 +607,37 @@ img {
         font-size: 20px;
     }
 }
-
+ 
 .xetaiv5 {
     text-align: center;
     background: rgba(217, 255, 0, 0.208);
     border-radius: 20px;
     p {
-
+ 
         font-size: 20px;
         color: white;
         border-radius: 10px;
     }
 }
-
+ 
 .xetaiv6 {
     text-align: center;
     background: rgba(5, 150, 138, 0.2);
     border-radius: 20px;
     p {
-
+ 
         font-size: 20px;
         color: white;
         border-radius: 10px;
     }
 }
-
+ 
 .quaylai {
     position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-
+ 
     text-align: center;
     background: rgba(255, 0, 0, 1.0);
     border-radius: 20px;
@@ -558,7 +652,7 @@ img {
         background: linear-gradient(to right, #000000, #808080);
     }
 }
-
+ 
 /*CSS cho bot*/
 /*Viền ngoài cho chatbox*/
 .chatbox {
@@ -578,7 +672,7 @@ img {
     background: rgb(167, 167, 167);
     border-radius: 10px;
 }
-
+ 
 .ai-message {
     max-width: 80%;
     margin-bottom: 15px;
@@ -586,11 +680,11 @@ img {
     background: linear-gradient(to right, #000000, #4d4c4c);
     border-radius: 12px;
 }
-
+ 
 .ai-message p {
     margin: 5px 0 0 0;
 }
-
+ 
 .user-message {
     max-width: 80%;
     margin: 10px 0 10px auto;
@@ -600,13 +694,13 @@ img {
     border-radius: 12px;
     text-align: right;
 }
-
+ 
 .chat-input {
     display: flex;
     gap: 10px;
     margin-top: 15px;
 }
-
+ 
 .chat-input input {
     flex: 1;
     padding: 12px;
@@ -614,7 +708,7 @@ img {
     border-radius: 8px;
     font-size: 16px;
 }
-
+ 
 /*Nút gửi*/
 .chat-input button {
     padding: 12px 20px;
@@ -624,11 +718,11 @@ img {
     color: white;
     cursor: pointer;
 }
-
+ 
 .chat-input button:hover {
     background: linear-gradient(to right, #000000, #808080);
 }
-
+ 
 .more-btn {
     margin-top: 15px;
     padding: 10px 15px;
@@ -641,14 +735,14 @@ img {
         background: linear-gradient(to right, #000000, #808080);
     }
 }
-
+ 
 .questions {
     display: none;
     margin-top: 10px;
     gap: 8px;
     flex-wrap: wrap;
 }
-
+ 
 .questions button {
     padding: 8px 12px;
     border: none;
@@ -656,11 +750,11 @@ img {
     background: #ddd;
     cursor: pointer;
 }
-
+ 
 .questions button:hover {
     background: #bbb;
 }
-
+ 
 .clear-btn {
     margin-top: 15px;
     padding: 8px 12px;
@@ -673,7 +767,6 @@ img {
         background: linear-gradient(to right, #000000, #808080);
     }
 }
-
 /* ============================================================
    RESPONSIVE - TỐI ƯU CHO MOBILE (thêm mới, không sửa CSS gốc)
    ============================================================ */
@@ -748,8 +841,9 @@ img {
         font-size: 20px;
     }
  
-    /* Ảnh và video: bỏ kích thước cố định, co giãn theo màn hình */
-    img:not(.logo) {
+    /* Ảnh và video: bỏ kích thước cố định, co giãn theo màn hình
+       (trừ logo trong header, giữ nguyên kích thước riêng) */
+    img:not(.logo):not(.anhquangcao){
         width: 100% !important;
         max-width: 100%;
         height: auto;
