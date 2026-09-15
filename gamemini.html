@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Game Kaido</title>
+    <link rel="icon" href="image/kaidoLogomini.png">
     <link rel="stylesheet" href="GameCss.css">
     <style>
         .game {
@@ -43,10 +44,10 @@
         }
         #jumpBtn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 120px;
-            height: 120px;
+            bottom: 50px;
+            right: 50px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             border: none;
             font-size: 25px;
@@ -55,7 +56,29 @@
             color: white;
             touch-action: manipulation; /* Chống delay chạm trên mobile */
             user-select: none;
+            &:hover {
+                background: linear-gradient(to right, #000000, #808080);
+            }
         }
+
+        #fastDownBtn {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    touch-action: manipulation;
+    user-select: none;
+    &:hover {
+                background: linear-gradient(to right, #000000, #808080);
+            }
+}
         /* Màn hình chờ bắt đầu / thua cuộc */
         .startScreen, .gameOverScreen {
             position: absolute;
@@ -82,6 +105,14 @@
             color: white;
             cursor: pointer;
             margin-bottom: -40px;
+            &:hover {
+                background: linear-gradient(
+            90deg,
+            red,
+            orange,
+            yellow
+    );
+            }
         }
         .gameOverScreen p {
             color: white;
@@ -95,7 +126,7 @@
     <!--TRANG LOADING-->
     <div id="loading">
         <img src="image/imgload.png">
-        <p>Đang tải, chờ xíu nha<span id="dots">.</span></p>
+        <p>Đang tải, gần xong rồi!!<span id="dots">.</span></p>
     </div>
 
 
@@ -111,7 +142,7 @@
  
         <div class="startScreen" id="startScreen">
             <button id="startBtn">CHƠI</button>
-            <p>Nhấn nút bay hoặc nhấn phím SPACE trên bàn phím</p>
+            <p>Nhấn nút bay hoặc nhấn phím SPACE trên bàn phím<br>Nhấn nút xuống để cho xe xuống nhanh.</p>
         </div>
  
         <div class="gameOverScreen" id="gameOverScreen" style="display:none;">
@@ -122,6 +153,7 @@
         </div>
     </div>
     <button id="jumpBtn">BAY</button>
+    <button id="fastDownBtn">XUỐNG</button>
  
     <script>
         const gameArea = document.getElementById("gameArea");
@@ -134,6 +166,7 @@
         const startBtn = document.getElementById("startBtn");
         const restartBtn = document.getElementById("restartBtn");
         const jumpBtn = document.getElementById("jumpBtn");
+        const fastDownBtn = document.getElementById("fastDownBtn");
  
         /* ==== Thông số vật lý & kích thước (khớp với CSS ở trên) ==== */
         const GROUND = 100;            // vị trí "bottom" khi đứng trên mặt đất
@@ -144,7 +177,7 @@
         const OBSTACLE_TOP = GROUND + TREE_HEIGHT; // đỉnh chướng ngại vật = 240
         const GRAVITY = -2100;         // trọng lực (px/s^2), càng âm rơi càng nhanh
         const JUMP_VELOCITY = 1050;    // vận tốc bật nhảy ban đầu (px/s)
-        const MAX_SPEED = 1500; // tốc độ tối đa của chướng ngại vật, chạy nhanh mấy cũng không vượt quá mức này
+        const MAX_SPEED = 2500; // tốc độ tối đa của chướng ngại vật, chạy nhanh mấy cũng không vượt quá mức này
  
         let started = false;
         let gameOver = false;
@@ -152,7 +185,7 @@
         let velocity = 0;
         let isJumping = false;
         let treeRight = -100;
-        let speed = 500;               // tốc độ chướng ngại vật (px/s), tăng dần theo điểm
+        let speed = 600;               // tốc độ chướng ngại vật (px/s), tăng dần theo điểm
         let score = 0;
         let scoreCounted = false;
         let lastTime = null;
@@ -162,7 +195,7 @@
             velocity = 0;
             isJumping = false;
             treeRight = -100;
-            speed = 500;
+            speed = 600;
             score = 0;
             scoreCounted = false;
             lastTime = null;
@@ -179,6 +212,19 @@
                 velocity = JUMP_VELOCITY;
             }
         }
+
+        /*Nhảy xuống nhanh*/
+        function fastDown() {
+    if (!started || gameOver) return;
+
+    if (isJumping) {
+        playerBottom = GROUND;
+        velocity = 0;
+        isJumping = false;
+
+        player.style.bottom = GROUND + "px";
+    }
+}
  
         function loop(timestamp) {
             if (!started || gameOver) return;
@@ -225,7 +271,7 @@
                 score += 10;
                 scoreEl.innerHTML = "Điểm: " + score;
                 scoreCounted = true;
-                speed = Math.min(speed + 10, MAX_SPEED); // tăng tốc nhẹ dần cho khó hơn, nhưng không vượt quá MAX_SPEED
+                speed = Math.min(speed + 25, MAX_SPEED); // tăng tốc nhẹ dần cho khó hơn, nhưng không vượt quá MAX_SPEED
             }
  
             requestAnimationFrame(loop);
@@ -256,6 +302,11 @@
                 e.preventDefault(); // tránh cuộn trang khi nhấn Space
                 jump();
             }
+            
+            if (e.code === "ArrowDown") {
+                e.preventDefault();
+                fastDown();
+            }
         });
  
         /* Nút nhảy: dùng touchstart để phản hồi tức thì trên mobile, không delay như click */
@@ -265,6 +316,15 @@
         }
         jumpBtn.addEventListener("touchstart", handleJumpInput, { passive: false });
         jumpBtn.addEventListener("click", jump);
+
+        /* Nút xuống nhanh */
+        function handleFastDownInput(e) {
+        e.preventDefault();
+        fastDown();
+        }
+
+        fastDownBtn.addEventListener("touchstart", handleFastDownInput, { passive: false });
+        fastDownBtn.addEventListener("click", fastDown);
  
         /* Trạng thái ban đầu: hiện màn hình "Bắt đầu", xe tải & chướng ngại vật đứng yên */
         resetGameState();
