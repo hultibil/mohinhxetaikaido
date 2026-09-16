@@ -111,7 +111,6 @@ body {
     background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
 }
  
- 
 /*CSS cho loading*/
 #loading {
     position: fixed;
@@ -215,7 +214,7 @@ body {
         background: linear-gradient(to right, #ff416c, #ff4b2b);
     }
 }
-.nut2, .nut3 {
+.nut2, .nut3, .nut4 {
     display: flex;
     a {
         color: white;
@@ -243,6 +242,20 @@ body {
         background: linear-gradient(to right, #ff416c, #ff4b2b);
     }
 }
+
+.nut4chon {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+    }}
  
  
 .logo {
@@ -800,7 +813,7 @@ img {
         height: 45px;
     }
  
-    .nut0, .nut0chon, .nut1, .nut1chon, .nut2, .nut2chon, .nut3 {
+    .nut0, .nut0chon, .nut1, .nut1chon, .nut2, .nut2chon, .nut3, .nut4, .nut4chon {
         margin-left: 0;
     }
  

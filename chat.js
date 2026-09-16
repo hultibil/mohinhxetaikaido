@@ -177,8 +177,8 @@ function askQuestion(question) {
         answer =
             "Xe tải V1 là mẫu xe tải đầu tiên có điều khiển từ xa với sóng 2.4Ghz đầu tiên của KAIDO. " +
             "Xe có thể điều khiển tiến, lùi, trái và phải. " +
-            "Đây là nền móng để phát triển các mẫu xe sau này."
-            "Ngoại hình được làm thành xe tải và nâng cấp thêm thùng đỏ nhưng bánh xe phải tự chế"
+            "Đây là nền móng để phát triển các mẫu xe sau này. " +
+            "Ngoại hình được làm thành xe tải và nâng cấp thêm thùng đỏ nhưng bánh xe phải tự chế. " +
             "Pin chỉ 500mah, sạc chậm vì số lượng pin không có nhiều vào thời điểm đó nên chỉ sử dụng pin chất lượng kém để có thể thử vận hành.";
 
     }
@@ -226,38 +226,22 @@ function askQuestion(question) {
 
     /*Chào hỏi cơ bản*/
     else if (
-        q.includes("Xin chào") ||
-        q.includes("XIN CHAO") ||
-        q.includes("xin chao") ||
         q.includes("xin chào") ||
-        q.includes("CHAO BAN") ||
-        q.includes("Chào bạn") ||
+        q.includes("xin chao") ||
+        q.includes("chào bạn") ||
         q.includes("chao ban") ||
         q.includes("hi") ||
-        q.includes("HI") ||
         q.includes("hello") ||
-        q.includes("Xin chào bạn") ||
-        q.includes("xin chao ban") ||
-        q.includes("Xin chao ban") ||
-        q.includes("xin chào bạn") ||
-        q.includes("Chào") ||
         q.includes("chào") ||
+        q.includes("chao") ||
         q.includes("chào buổi sáng") ||
         q.includes("chao buoi sang") ||
-        q.includes("Chào buổi sáng") ||
-        q.includes("Chao buoi sang") ||
         q.includes("chào buổi trưa") ||
         q.includes("chao buoi trua") ||
-        q.includes("Chào buổi trưa") ||
-        q.includes("Chao buoi trua") ||
-        q.includes("Chao buoi chieu") ||
-        q.includes("Chào buổi chiều") ||
-        q.includes("chao buoi chieu") ||
         q.includes("chào buổi chiều") ||
-        q.includes("Chào buổi tối") ||
+        q.includes("chao buoi chieu") ||
         q.includes("chào buổi tối") ||
-        q.includes("chao buoi toi") ||
-        q.includes("Chào buổi tối")
+        q.includes("chao buoi toi")
     ) {
         answer =
         "Xin chào bạn, mình có thể giúp gì cho bạn"+
@@ -266,19 +250,12 @@ function askQuestion(question) {
 
     else if (
         q.includes("bai") ||
-        q.includes("Bai") ||
-        q.includes("BAI") ||
         q.includes("bye") ||
-        q.includes("BYE") ||
-        q.includes("Tạm biệt") ||
         q.includes("tạm biệt") ||
-        q.includes("TẠM BIỆT") ||
         q.includes("bai nha") ||
         q.includes("cáo từ") ||
         q.includes("tam biet") ||
-        q.includes("TAM BIET") ||
         q.includes("tạm biệt bạn") ||
-        q.includes("Tạm biệt bạn") ||
         q.includes("tam biet ban")
     ) {
         answer =
@@ -293,13 +270,9 @@ function askQuestion(question) {
         q.includes("giúp được gì") ||
         q.includes("giup duoc gi") ||
         q.includes("giup cai gì") ||
-        q.includes("Giúp cái gì") ||
-        q.includes("Giup cai gi") ||
         q.includes("giúp cái gì") ||
         q.includes("giúp được cái gì") ||
-        q.includes("Giúp được cái gì") ||
-        q.includes("giup duoc cai gi") ||
-        q.includes("Giup duoc cai gi")
+        q.includes("giup duoc cai gi")
     ) {
         answer =
         "Mình có thể giúp bạn biết thông tin về thương hiệu Kaido và sản phẩm khác của Kaido."
@@ -307,11 +280,8 @@ function askQuestion(question) {
 
     else if (
         q.includes("gay") ||
-        q.includes("GAY") ||
         q.includes("mày gay") ||
-        q.includes("m gay") ||
-        q.includes("M gay") ||
-        q.includes("MÀY GAY")
+        q.includes("m gay")
     ) {
         answer =
         "Bạn đừng nói mình thế, mình thằng tấp như cây thước 30cm."
