@@ -83,7 +83,11 @@
     font-style: italic;
     font-display: swap;
 }
- 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 130px;
     background: #111827;
@@ -166,8 +170,10 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+    transition: all 0.3s ease;
     &:hover a {
         background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
     }
 }
 .nut0 {
@@ -181,8 +187,11 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+
+    transition: all 0.3s ease;
     &:hover a {
         background: linear-gradient(to right, #000000, #808080);
+        transform: translateY(-2px);
         }
 }
 .nut1 {
@@ -195,8 +204,11 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+
+    transition: all 0.3s ease;
     &:hover a {
         background: linear-gradient(to right, #000000, #808080);
+        transform: translateY(-2px);
     }
 }
 /*Nút 1 đã chọn*/
@@ -210,8 +222,11 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+
+    transition: all 0.3s ease;
     &:hover a {
         background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
     }
 }
 .nut2, .nut3, .nut4 {
@@ -224,8 +239,11 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+
+    transition: all 0.3s ease;
     &:hover a {
         background: linear-gradient(to right, #000000, #808080);
+        transform: translateY(-2px);
     }
 }
 .nut2chon {
@@ -238,8 +256,10 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+    transition: all 0.3s ease;
     &:hover a {
         background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
     }
 }
 
@@ -253,8 +273,11 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+
+    transition: all 0.3s ease;
     &:hover a {
         background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
     }}
  
  
@@ -354,24 +377,30 @@ body {
 /*Khu vuc ket thuc su kien*/
 .gioithieu {
     text-align: left;
-    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0));
+    background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.9),rgba(0,0,0,0.0)),
+    url('image/anhmucluc.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 10px;
     p {
     font-size: 24px;
     }
     a {
     background: rgba(0, 0, 0, 0.5);
-    padding: 10px 10px;
+    padding: 10px 20px;
     margin-left: 5px;
     gap: 5px;
     display: inline-block;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-family: 'HarmonyOS Sans', sans-serif;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
+    transition: all 0.3s ease;
     &:hover {
-        background: rgba(0, 0, 0, 0.8);
+        background: linear-gradient(to right, #000000, #808080);
+        transform: translateY(-2px); /*Nhích nhẹ lên*/
     }
 }}
  
@@ -818,7 +847,7 @@ img {
     }
  
     .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
-    .nut2 a, .nut2chon a, .nut3 a {
+    .nut2 a, .nut2chon a, .nut3 a, .nut4 a .nut4chon a{
         font-size: 12px;
         padding: 8px 12px;
     }
@@ -907,7 +936,7 @@ img {
     }
  
     .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
-    .nut2 a, .nut2chon a, .nut3 a {
+    .nut2 a, .nut2chon a, .nut3 a, .nut4 a, .nut4chon a {
         font-size: 11px;
         padding: 6px 10px;
     }

@@ -123,8 +123,8 @@ body {
     text-align: center;
     margin-top: 20px;
     a {
-        font-family: 'system-ui';
-        font-size: 20px;
+        font-family: 'HarmonyOS Sans';
+        font-size: 25px;
         color: white;
         text-decoration: none;
         background: linear-gradient(to right, #ff416c, #ff4b2b);
@@ -135,6 +135,7 @@ body {
 
 .back {
     animation: moDan 1s infinite;
+
 }
 @keyframes moDan {
     0% {
