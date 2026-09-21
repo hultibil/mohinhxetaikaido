@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ giới thiệu Kaido</title>
     <link rel="icon" href="image/kaidoLogomini.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
     <!--TRANG LOADING-->
@@ -18,7 +19,7 @@
             <img class="logo" src="image/kaidologo.jpg">
             <h2>Trang chủ giới thiệu Kaido</h2>
             <div class="nut0">
-                <a href="index.html" onclick="clickSound()">Trang chủ</a>
+                <a href="index.php" onclick="clickSound()">Trang chủ</a>
             </div>
             <div class="nut1"> <!--Add CSS-->
                 <a href="khac.html" onclick="clickSound()">Dự án khác</a>
@@ -27,13 +28,37 @@
                 <a href="hoithem.html" onclick="clickSound()">Trò chuyện</a>
             </div>
             <div class="nut4chon">
-                <a href="tienich.html" onclick="clickSound()">Tính năng</a>
+                <a href="tienich.p" onclick="clickSound()">Tính năng</a>
             </div>
             <div class="nut3">
                 <a href="gamemini.html" onclick="clickSound()">Game mini</a>
             </div>
     </div>
-    <h2 class="text">Chưa có tính năng nào !!</h2>
+    <div class="container">
+        <!-- 1. THÔNG TIN TÀI KHOẢN -->
+        <div class="account-card">
+            <h2>👤 THÔNG TIN TÀI KHOẢN</h2>
+            <p style="font-size: 20px;">Tên tài khoản: <b style="color: #2196F3;"><?php echo htmlspecialchars($_SESSION['user_logged_in']); ?></b></p>
+            <p>Trạng thái: <span style="color: #4CAF50;">Đã xác thực</span></p>
+            <a href="logout.php" class="btn-logout">Đăng xuất</a>
+        </div>
+
+        <!-- 2. CÁC TÍNH NĂNG CHƯA BỔ SUNG -->
+        <h3 style="margin-bottom: 15px;">🚀 TÍNH NĂNG HỆ THỐNG</h3>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4>🛒 Mua / Bán Xe</h4>
+                <p>Chức năng mua bán giao dịch mô hình (Đang phát triển...)</p>
+            </div>
+            <div class="feature-box">
+                <h4>📦 Đơn Hàng Của Tôi</h4>
+                <p>Xem lịch sử mua hàng (Chưa bổ sung)</p>
+            </div>
+            <div class="feature-box">
+                <h4>⚙️ Cài Đặt Tài Khoản</h4>
+                <p>Đổi mật khẩu, thông tin (Chưa bổ sung)</p>
+            </div>
+        </div>
 <div id="info">
     <div class="thongtinweb">
     <h4 class="text">Bạn đang ở cuối trang.</h4>

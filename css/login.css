@@ -1,0 +1,197 @@
+/* Nhúng font riêng - HarmonyOS Sans (đầy đủ 6 độ đậm x thường/nghiêng) */
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin_Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light_Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium_Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold_Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black_Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+/*Căn giữa all đăng nhập*/
+body {
+    display: flex;
+    justify-content: center; /*L R*/
+    align-items: center; /*U D*/
+    background: #111827;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    color: white;
+    gap: 20px;
+    flex-direction: column;
+}
+
+/*CSS cho loading*/
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+#loading img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    animation: logoLoading 1.0s ease-in-out infinite;
+}
+#loading p {
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+}
+@keyframes logoLoading {
+    0% {
+        transform: scale(1.0);
+        opacity: 0.7;
+    }
+ 
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+ 
+    100% {
+        transform: scale(1.0);
+        opacity: 0.7;
+    }
+}
+
+.logo {
+    align-items: center;
+    width:100px;
+    height:60px;
+    border-radius: 10px;
+}
+
+/* 3. Trang trí khung Login cho gọn gàng */
+.login-container {
+    font-size: 25px;
+    width: 100%;
+    max-width: 500px;        /* Chiều rộng tối đa của khung login */
+    padding: 100px;
+    background: linear-gradient(to right, #000000, #808080);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng đổ */
+    text-align: center;      /* Căn giữa các đoạn text/tiêu đề bên trong */
+}
+
+.form-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;        /* Giữ nhãn (label) và ô input căn lề trái cho dễ nhìn */
+    font-size: 25px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;  /* Giúp input không bị tràn ra ngoài khung */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);; /* Màu cam thương hiệu KAIDO */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    transition: background-color 0.5s ease; /* Chuyển màu nền trong 0.3 giây */
+}
+.btn-submit:hover {
+        background: linear-gradient(to right, #000000, #808080);
+    }
