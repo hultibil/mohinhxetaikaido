@@ -1,39 +1,289 @@
+/* Nhúng font riêng - HarmonyOS Sans (đầy đủ 6 độ đậm x thường/nghiêng) */
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin_Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light_Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium_Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold_Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black_Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-            margin: 0;
-            padding: 0;
-            background-color: #111827;
-            font-family: 'HarmonyOS Sans', sans-serif;
-            color: white;
+    padding: 130px;
+    background: #111827;
+    color:white;
+    font-family: 'HarmonyOS Sans', sans-serif;
+}
+ 
+/* CSS cho tiêu đề */
+.header {
+    position: fixed; /* Đặt vị trí cố định để header luôn hiển thị trên cùng */
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex; /* Sử dụng flexbox để căn giữa các phần tử con */
+    justify-content: left; /* Căn giữa theo chiều ngang */
+    align-items: center; 
+    gap: 10px;
+    background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
+}
+
+/*CSS cho loading*/
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+#loading img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    animation: logoLoading 1.0s ease-in-out infinite;
+}
+#loading p {
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+}
+@keyframes logoLoading {
+    0% {
+        transform: scale(1.0);
+        opacity: 0.7;
+    }
+ 
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+ 
+    100% {
+        transform: scale(1.0);
+        opacity: 0.7;
+    }
+}
+/* CSS cho hang nut tren dau */
+.nut0chon {
+    margin-left: auto;
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    transition: all 0.3s ease;
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
+    }
+}
+.nut0 {
+    margin-left: auto;
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    transition: all 0.3s ease;
+    &:hover a {
+        background: linear-gradient(to right, #000000, #808080);
+        transform: translateY(-2px);
         }
+}
+.nut1 {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    transition: all 0.3s ease;
+    &:hover a {
+        background: linear-gradient(to right, #000000, #808080);
+        transform: translateY(-2px);
+    }
+}
+/*Nút 1 đã chọn*/
+.nut1chon {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    transition: all 0.3s ease;
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
+    }
+}
+.nut2, .nut3, .nut4 {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    transition: all 0.3s ease;
+    &:hover a {
+        background: linear-gradient(to right, #000000, #808080);
+        transform: translateY(-2px);
+    }
+}
+.nut2chon {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    transition: all 0.3s ease;
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
+    }
+}
+
+.nut4chon {
+    display: flex;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        background: linear-gradient(to right, #000000, #808080);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    transition: all 0.3s ease;
+    &:hover a {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform: translateY(-2px);
+    }}
+ 
+ 
 .logo {
     text-align: center;
     width:100px;
     height:60px;
 }
-        /* Thanh điều hướng Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(to right, #000000, #434343);
-            padding: 15px 40px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            margin-left: 20px;
-            transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #ff416c;
-        }
-
-        .container {
+.container {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
@@ -80,3 +330,152 @@ body {
             border-radius: 8px;
             font-weight: bold;
         }
+
+
+.thongtinweb {
+    text-align: center;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 20px;
+    p {
+        font-size: 15px;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .date {
+        font-style: italic;
+        font-size: 18px;
+    }
+}
+ 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    color: white;
+}
+/*hover cho nút tik tok*/
+.tiktok, .tiktok2, .tiktok3{
+    &:hover a {
+        background: linear-gradient(
+    90deg,
+    #25f4ee,
+    #000000,
+    #fe2c55
+);
+    }
+}
+/*hover cho nút youtube*/
+.youtube, .youtube2{
+    &:hover a {
+        background: red;
+}
+}
+/*Thu nhổ thì tự động thu lại thành dọc*/
+@media (max-width: 1000px) {
+    .footer, .ads {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+ 
+.quaylai {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+ 
+    text-align: center;
+    background: rgba(255, 0, 0, 1.0);
+    border-radius: 20px;
+    padding: 8px 30px;
+    z-index:999;
+    a {
+        color: pink;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    &:hover{
+        background: linear-gradient(to right, #000000, #808080);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - TỐI ƯU CHO MOBILE (thêm mới, không sửa CSS gốc)
+   ============================================================ */
+@media (max-width: 768px) {
+ 
+    body {
+        padding: 15px;
+    }
+ 
+    /* Bỏ "fixed" trên mobile để header không đè lên nội dung
+       dù nó xuống mấy dòng cũng không sao, không cần padding-top đoán mò */
+    .header {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+ 
+    .header h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 0;
+    }
+ 
+    .logo {
+        width: 70px;
+        height: 45px;
+    }
+ 
+    .nut0, .nut0chon, .nut1, .nut1chon, .nut2, .nut2chon, .nut3, .nut4, .nut4chon {
+        margin-left: 0;
+    }
+ 
+    .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
+    .nut2 a, .nut2chon a, .nut3 a, .nut4 a, .nut4chon a{
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+ 
+    .footer {
+        padding: 20px 15px;
+        text-align: center;
+    }
+ 
+    .quaylai a {
+        font-size: 16px;
+    }
+}
+ 
+@media (max-width: 480px) {
+ 
+    .header h2 {
+        font-size: 13px;
+    }
+ 
+    .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
+    .nut2 a, .nut2chon a, .nut3 a, .nut4 a, .nut4chon a {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+ 
+    .silver {
+        font-size: 19px;
+    }
+ 
+    .chat {
+        height: 320px;
+    }
+ 
+    .chat-input input {
+        font-size: 14px;
+    }
+}

@@ -8,11 +8,6 @@
         <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
-        <!--TRANG LOADING-->
-    <div id="loading">
-        <img src="image/imgload.png">
-        <p>Đang tải, gần xong rồi!!<span id="dots">.</span></p>
-    </div>
         <img class="logo" src="image/kaidologo.jpg">
 
         <!--O DANG NHAP -->
@@ -30,18 +25,13 @@
                 <input type="password" id="password" name="password" placeholder="Nhập mật khẩu..." required>
             </div>
 
+            <?php if (isset($_GET['error'])): ?>
+                <p style="color: red; text-align: center;">Tài khoản hoặc mật khẩu không chính xác.</p>
+            <?php endif; ?>
+
             <button type="submit" class="btn-submit">Đăng nhập</button>
             <a href="register.php" style="display: block; text-align: center; margin-top: 15px; color: white;">Chưa có tài khoản? Đăng ký ngay</a>
         </form>
     </div>
-    <script>
-window.addEventListener("load", function() {
-    const loading = document.getElementById("loading");
-    loading.style.opacity = "0";
-    setTimeout(function() {
-        loading.style.display = "none";
-    }, 500);
-});
-</script>
     </body>
 </html>

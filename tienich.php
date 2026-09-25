@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -28,11 +27,12 @@
                 <a href="hoithem.html" onclick="clickSound()">Trò chuyện</a>
             </div>
             <div class="nut4chon">
-                <a href="tienich.p" onclick="clickSound()">Tính năng</a>
+                <a href="tienich.php" onclick="clickSound()">Tính năng</a>
             </div>
             <div class="nut3">
                 <a href="gamemini.html" onclick="clickSound()">Game mini</a>
             </div>
+    </div>
     </div>
     <div class="container">
         <!-- 1. THÔNG TIN TÀI KHOẢN -->
@@ -59,6 +59,7 @@
                 <p>Đổi mật khẩu, thông tin (Chưa bổ sung)</p>
             </div>
         </div>
+</div>
 <div id="info">
     <div class="thongtinweb">
     <h4 class="text">Bạn đang ở cuối trang.</h4>
@@ -95,6 +96,8 @@ function capNhatGio() {
 setInterval(capNhatGio, 1000);
 </script>
     <p class="date">Cập nhật trang web lần cuối: 16/09/2026</p>
+</div>
+</div>
 </div>
 
 <div class="quaylai">
